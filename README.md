@@ -8,7 +8,9 @@ Supports multiple clients.
 to run the client:
 ```c++
     try {
-        Client c("26.242.27.251", "27015");
+        // replace SERVER_IP_ADDRESS and PORT
+        // EX: c("26.242.27.251", "27015");
+        Client c("SERVER_IP_ADDRESS", "PORT");
         c.Run();
     }
     catch (...) {
@@ -19,7 +21,9 @@ to run the client:
 to run the server:
 ```c++
     try {
-        Server s("27015");
+        // replace PORT
+        // EX: s("27015");
+        Server s("PORT");
         s.Monitor();
     }
     catch (...) {

@@ -2,8 +2,11 @@
 
 
 Client::Client(const char* IP, const char* port)
-    : serverPort(port)
+    : serverPort(port), serverIP(IP)
 {
+    // Make sure memory is cleared for WSAStartup
+    WSACleanup();
+
     WSADATA wsaData;
     if (int eCode = WSAStartup(MAKEWORD(2, 2), &wsaData))
         throw eCode;

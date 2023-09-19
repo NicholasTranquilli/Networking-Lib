@@ -5,6 +5,9 @@ Server::Server(const char* nPort)
 {
     addrinfo* result;
 
+    // Make sure memory is cleared for WSAStartup
+    WSACleanup();
+
     WSADATA wsaData;
     if (int eCode = WSAStartup(MAKEWORD(2, 2), &wsaData))
         throw eCode;
