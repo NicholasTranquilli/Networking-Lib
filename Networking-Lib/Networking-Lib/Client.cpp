@@ -1,12 +1,8 @@
 #include "Client.h"
 
-
 Client::Client(const char* IP, const char* port)
     : serverPort(port), serverIP(IP)
 {
-    // Make sure memory is cleared for WSAStartup
-    WSACleanup();
-
     WSADATA wsaData;
     if (int eCode = WSAStartup(MAKEWORD(2, 2), &wsaData))
         throw eCode;
@@ -32,6 +28,11 @@ Client::Client(const char* IP, const char* port)
         throw WSAGetLastError();
 
     freeaddrinfo(result);
+}
+
+Client::~Client()
+{
+    WSACleanup();
 }
 
 void Client::GetSession(Client* client)

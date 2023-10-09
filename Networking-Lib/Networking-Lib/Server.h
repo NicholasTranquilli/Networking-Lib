@@ -22,6 +22,7 @@ class Server
 
 public:
 	Server(const char* nPort);
+	~Server();
 	int GetFrom(SOCKET& client, char* msg, int size);
 	int SendTo(SOCKET& client, char* msg, int size);
 

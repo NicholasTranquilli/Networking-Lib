@@ -1,0 +1,8 @@
+﻿  Client.cpp
+  main.cpp
+  Server.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 150 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Networking-Lib.vcxproj -> C:\Users\nickt\source\repos\Networking-Lib\Networking-Lib\Release\Networking-Lib.exe

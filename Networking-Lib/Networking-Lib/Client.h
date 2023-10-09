@@ -23,6 +23,7 @@ class Client
 
 public:
 	Client(const char* IP, const char* port);
+    ~Client();
     int Get(char* out, int size);
     void Send(char* message);
     int Run();

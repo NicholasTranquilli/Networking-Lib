@@ -32,12 +32,6 @@ int RunServer()
 
 int main()
 {
-    //std::string IPs;
-    //printf("ENTER IP: ");
-    //std::cin >> IPs;
-    //char* IP = new char;
-    //strcpy_s(IP, IPs.length() + 1, IPs.c_str());
-    //printf("IP IS: %s\n", IP);
-    //RunClient(IP);
-    RunServer();
+
+    return 0;
 }
